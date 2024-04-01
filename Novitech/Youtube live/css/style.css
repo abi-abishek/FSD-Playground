@@ -10,11 +10,11 @@ body {
 }
 
 .container {
-    height: 450px;
-    width: 500px;
+    height: 500px;
+    width: 450px;
     background-color: white;
     border-radius: 5px;
-    padding: 15px;
+    padding: 100px;
     box-shadow: 2px 2px 3px rgb(82, 81, 81);
 }
 
@@ -33,9 +33,33 @@ body {
 input,button,label {
     display: block;
     width: 100%;
-
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
 }
 
 .inputs {
     text-align: left;
+    margin-top: 10px;
+}
+
+label {
+    color: rgb(11, 208, 247);
+
+}
+
+input {
+    padding: 10px;
+    box-shadow: 3px 3px 2px rgb(82, 81, 81);
+    border-radius: 10px;
+    
+}
+
+button {
+    background-color: rgb(11, 208, 247);
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+
 }
