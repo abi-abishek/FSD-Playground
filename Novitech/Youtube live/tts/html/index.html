@@ -10,21 +10,10 @@
     <div id="container">
         <h2>Text To Speech</h2>
         <textarea id="textTospeech"></textarea>
-        <button onclick="speak()" >Click To Speak</button>
+        <button onclick="speak()" id="myBtn">Click To Speak</button>
     </div>
     
-    <script>
-        var speech = new SpeechSynthesisUtterance();
-
-        function speak(){
-            speech.text = textTospeech.value;
-            speech.rate = 1;
-            speech.volume = 1;
-            speech.pitch = 1;
-
-            window.speechSynthesis.speak(speech);
-        }
-    </script>
+    <script src="../javascript/script.js"></script>
 
 </body>
 </html>
