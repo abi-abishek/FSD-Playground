@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif
+        }
+
+        header {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: rgb(61, 60, 60);
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            padding-right: 25px;
+        }
+
+        .about-us {
+            background-color: rgb(160, 117, 117);
+        }
+
+        .about-us h1 {
+            color: rgb(246, 67, 67);
+            font-size: 75px;
+            text-align: center;
+        }
+
+        .about-us p {
+            font-size: 20px;
+            color: white;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .team {
+            text-decoration: none;
+            color: black;
+            background-color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-left: 700px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>One Page Website</h1>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="service.html">Services</a>
+    </nav>
+
+    <section class="about-us">
+        <h1>ABOUT US</h1>
+        <p>Technology has reduced the effort and time and increased the efficiency of the production requirements in every field. It has made our lives easy, comfortable, healthy, and enjoyable. It has brought a revolution in transport and communication. The advancement of technology, along with science, has helped us to become self-reliant in all spheres of life.</p>
+        <a href="#" class="team">Our Team</a>
+    </section>
+
+    <p id="demo"></p>
+    <script src="https:translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+        function googleTranslateElementInit(){
+            new google.translate.TranslateElement(
+                {pagelanguage: 'en'},'demo'
+            );
+        }
+    </script>
+    
+</body>
+</html>
