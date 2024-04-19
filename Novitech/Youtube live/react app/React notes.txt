@@ -1,7 +1,10 @@
 React notes
 
+(npx - Node Package Execute)
+
 npx create-react-app my-app
 
 cd my-app
 
 npm start
+
