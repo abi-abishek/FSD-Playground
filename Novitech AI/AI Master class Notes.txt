@@ -1,0 +1,32 @@
+AI Master class Notes
+
+Day 2
+
+python installation
+
+install python 3.9.6
+
+pip install pandas==2.1.1
+
+Day 3
+
+pip install opencv-python
+
+pip install opencv-contrib-python
+
+Libraries
+
+1. Opencv - computer vision
+2. pillow - enchance image and editing purpose
+3. scikit image - image and object segmentation
+4. urlib - url oriented processing (ex: product comparison)
+5. scipy - Scientific python
+6. numpy - Numerical python
+
+Installing libraries
+
+1. pip install matplotlib
+2. pip install seaborn
+3. pip install scipy
+4. pip install imutils 
+
