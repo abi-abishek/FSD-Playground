@@ -1,38 +1,97 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  margin: 0;
+  padding: 80px 0;
+  width: 100%;
+  background-color: aliceblue;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 75px;
+  top: 0;
+  position: fixed;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 15px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-products {
+  display: flex;
+  padding: 5px 0;
+  justify-content: space-around;
+  list-style: none;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-product {
+  border: 2px solid black;
+  margin: 10px;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+ul li {
+  margin-right: 30px;
+}
+
+h2 {
+  color: rgb(14, 23, 24);
+  text-align: center;
+}
+
+.App-product img {
+  border-radius: 5px;
+}
+
+p {
+  font-weight: bold;
+}
+
+button {
+  background-color: rgb(38, 149, 168);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.App-cart{
+  background-color: #939393;
+  width: 100%;
+}
+.App-cart button {
+  background-color: rgb(38, 149, 168);
+  color: black;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-left: 47.5%;
+  margin-bottom: 20px;
+}
+
+footer {
+  background-color: #282c34;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  padding: 16px 0;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
 }

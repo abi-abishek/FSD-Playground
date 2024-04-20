@@ -35,7 +35,7 @@ function App() {
       <section className="App-products">
         {products.map(product => (
           <div key={product.id} className="App-product">
-            <img src={product.image} alt={product.name} style={{width: '100%', height:'auto'}} />
+            <img src={product.image} alt={product.name} style={{width: '300px', height:'300px'}} />
             <h3>{product.name}</h3>
             <p>${product.price}</p>
             <button onClick={() => addToCart(product.id)}>Add to Cart</button>
@@ -51,6 +51,9 @@ function App() {
         </ul>
         <button onClick={checkout}>Checkout</button>
       </section>
+      <footer>
+        &copy; Designed by Abishek
+      </footer>
     </div>
   );
 }
