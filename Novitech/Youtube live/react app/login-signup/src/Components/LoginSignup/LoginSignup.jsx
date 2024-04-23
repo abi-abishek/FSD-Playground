@@ -1,7 +1,8 @@
 import React from "react";
 import './LoginSignup.css';
-import user_icon from '../Assets/'
-import email_icon from '../Assets'
+import user_icon from '../Assets/user_icon.jpeg'
+import email_icon from '../Assets/email_icon.jpeg'
+import password_icon from '../Assets/password_icon.jpeg'
 
 const LoginSignup = () =>
 {
@@ -25,6 +26,11 @@ const LoginSignup = () =>
                   <input type="password" placeholder="Password" />
                 </div>
              </div>
+             <div className="forgot-password">Lost your password?<span>Click here</span></div>
+                <div className="submit-container">
+                  <button className="submit">Signup</button>
+                  <button className="submit">Login</button>
+                </div>
         </div>
     )
 }
