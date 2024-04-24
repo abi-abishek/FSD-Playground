@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import QRCode from 'qrcode';
 
+
 function QRCodeGenerator() {
     const [name, setName] = useState('');
     const [rollNumber, setRollNumber] = useState('');
@@ -39,7 +40,7 @@ function QRCodeGenerator() {
 
     return(
         <div className="qr-generator-container">
-            <h2>Gnerate QR Code</h2>
+            <h2>Generate QR Code</h2>
             <div className="form-container">
                 <label>
                     Name:
