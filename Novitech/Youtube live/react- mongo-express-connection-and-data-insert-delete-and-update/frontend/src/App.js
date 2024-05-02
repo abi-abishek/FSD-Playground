@@ -1,16 +1,17 @@
-import React, { Components } from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 
-class App extends Components {
-  // initialize our state
+class App extends Component {
   state = {
     data: [],
     id: 0,
     message: null,
     intervalIsSet: false,
+    idToUpdate: '',
+    updateToApply: '',
   };
 
-  ComponentDidMount() {
+  componentDidMount() {
     this.getDataFromDb();
     if (!this.state.intervalIsSet) {
       let interval = setInterval(this.getDataFromDb, 1000);
@@ -18,7 +19,7 @@ class App extends Components {
     }
   }
 
-  ComponentWillUnmount() {
+  componentWillUnmount() {
     if (this.state.intervalIsSet) {
       clearInterval(this.state.intervalIsSet);
       this.setState({ intervalIsSet: null });
@@ -26,8 +27,7 @@ class App extends Components {
   }
 
   getDataFromDb = () => {
-    fetch('http://localhost:3001/api/getData')
-      .then((data) => data.json())
+    axios.get('http://localhost:3001/api/getData')
       .then((res) => this.setState({ data: res.data }));
   };
 
@@ -46,9 +46,8 @@ class App extends Components {
 
   deleteFromDB = (deleteMessage) => {
     let objIdToDelete = null;
-    console.log(deleteMessage)
     this.state.data.forEach((dat) => {
-      if(dat.message == deleteMessage) {
+      if (dat.message === deleteMessage) {
         objIdToDelete = dat._id;
       }
     });
@@ -62,9 +61,9 @@ class App extends Components {
 
   updateDB = (idToUpdate, updateToApply) => {
     let objIdToUpdate = null;
-    parseInt(idToUpdate);
+    idToUpdate = parseInt(idToUpdate);
     this.state.data.forEach((dat) => {
-      if (dat.id == idToUpdate) {
+      if (dat.id === idToUpdate) {
         objIdToUpdate = dat._id;
       }
     });
@@ -83,36 +82,36 @@ class App extends Components {
           {data.length <= 0
             ? 'NO DB ENTRIES YET'
             : data.map((dat) => (
-              <li style={{padding: '10px'}} key={data.message}>
-                <span style={{ color: 'gray '}}> id: </span> {dat.id}
-                <span style={{ color: 'gray '}}> data: </span>
+              <li style={{ padding: '10px' }} key={dat.id}>
+                <span style={{ color: 'gray' }}> id: </span> {dat.id}
+                <span style={{ color: 'gray' }}> data: </span>
                 {dat.message}
               </li>
             ))}
         </ul>
-        <div style={{padding: '10px' }}>
+        <div style={{ padding: '10px' }}>
           <input
             type="text"
             onChange={(e) => this.setState({ message: e.target.value })}
             placeholder="Add something in the database"
-            style={{width: '200px' }}
+            style={{ width: '200px' }}
           />
           <button onClick={() => this.putDataToDB(this.state.message)}>
             ADD
           </button>
         </div>
-        <div style={{padding: '10px' }}>
+        <div style={{ padding: '10px' }}>
           <input
             type="text"
             onChange={(e) => this.setState({ idToUpdate: e.target.value })}
             placeholder="id of item to update here"
-            style={{width: '200px' }}
+            style={{ width: '200px' }}
           />
           <input
             type="text"
             onChange={(e) => this.setState({ updateToApply: e.target.value })}
             placeholder="put new value of the item here"
-            style={{width: '200px' }}
+            style={{ width: '200px' }}
           />
           <button onClick={() => this.updateDB(this.state.idToUpdate, this.state.updateToApply)}>
             UPDATE

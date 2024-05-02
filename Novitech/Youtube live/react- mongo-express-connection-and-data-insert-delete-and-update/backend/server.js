@@ -10,8 +10,8 @@ const app = express();
 app.use(cors());
 const router = express.Router();
 
-// const dbRoute = 
-//     URL;
+const dbRoute = 
+    'mongodb+srv://testbydtm.mt2yzeb.mongodb.net/?retryWrites=true&w=majority&appName=testbydtm';
 
 mongoose.connect(dbRoute, { useNewUrlParser: true });
 
